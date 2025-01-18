@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: bbfe39bc5a22bd41aa61b56ab3ad1f8e
     GuidInternal: 
-    m_lastTime: -8584644222435422924
-    List: []
+    m_lastTime: -8584644211477640046
+    List:
+    - name: SFX
+      guid: 19cbe6be907d2a428ea72d5ba919bf39
+      id: 393239870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bbfe39bc5a22bd41aa61b56ab3ad1f8e
+      - ElementName: SFX
+        ObjectType: 7
+        guid: 19cbe6be907d2a428ea72d5ba919bf39
+      Path: SoundBanks\Default Work Unit\SFX
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -94,8 +108,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: d2254c52d0803d4bbebb1aaab026dc41
     GuidInternal: 
-    m_lastTime: -8584644222434891711
-    List: []
+    m_lastTime: -8584644204182980092
+    List:
+    - name: car_speed
+      guid: c51a93273c19774c890d339789ec8f19
+      id: 4164958897
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d2254c52d0803d4bbebb1aaab026dc41
+      - ElementName: car_speed
+        ObjectType: 13
+        guid: c51a93273c19774c890d339789ec8f19
+      Path: Game Parameters\Default Work Unit\car_speed
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
