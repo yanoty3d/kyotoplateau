@@ -7,6 +7,11 @@ public class ChangeAppearanceOnHit : MonoBehaviour
 
     private bool hasTransformed = false; // Prevents multiple transformations
 
+    void Start()
+    {
+        AkSoundEngine.PostEvent("Play_Car_Sound" , this.gameObject);
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         // Check if the collision is caused by a bullet
@@ -32,6 +37,7 @@ public class ChangeAppearanceOnHit : MonoBehaviour
 
             // Destroy the car object
             Destroy(carObject);
+            AkSoundEngine.PostEvent("Stop_Car_Sound" , this.gameObject);
         }
         else
         {

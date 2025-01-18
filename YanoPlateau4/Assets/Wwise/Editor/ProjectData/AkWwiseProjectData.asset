@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: bbfe39bc5a22bd41aa61b56ab3ad1f8e
     GuidInternal: 
-    m_lastTime: -8584644211477640046
+    m_lastTime: -8584643624356701757
     List:
     - name: SFX
       guid: 19cbe6be907d2a428ea72d5ba919bf39
@@ -94,8 +94,110 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a27eefce9fe88c44a83d4ac8f295a6b2
     GuidInternal: 
-    m_lastTime: -8584644222435798219
-    List: []
+    m_lastTime: -8584643624357065014
+    List:
+    - name: Play_Car_Sound
+      guid: d73a638cd84a504797dece44685f8f35
+      id: 1756269068
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Play_Car_Sound
+        ObjectType: 3
+        guid: d73a638cd84a504797dece44685f8f35
+      Path: Events\Default Work Unit\Play_Car_Sound
+      maxAttenuation: 50
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Footsteps
+      guid: 3a09147080e56747a354fe82e028d7a0
+      id: 3854155799
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Play_Footsteps
+        ObjectType: 3
+        guid: 3a09147080e56747a354fe82e028d7a0
+      Path: Events\Default Work Unit\Play_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.56535417
+      minDuration: 0.5230208
+    - name: Play_Jump
+      guid: be11e7b3de31dd48a64e88254944d79e
+      id: 3689126666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Play_Jump
+        ObjectType: 3
+        guid: be11e7b3de31dd48a64e88254944d79e
+      Path: Events\Default Work Unit\Play_Jump
+      maxAttenuation: 0
+      maxDuration: 0.8958542
+      minDuration: 0.8958542
+    - name: Play_Shot
+      guid: 74562ad34406594db2ddfd039b780ceb
+      id: 268953978
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Play_Shot
+        ObjectType: 3
+        guid: 74562ad34406594db2ddfd039b780ceb
+      Path: Events\Default Work Unit\Play_Shot
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: Play_Sprint
+      guid: 1704e728f0477b48b91064093acdba81
+      id: 633054210
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Play_Sprint
+        ObjectType: 3
+        guid: 1704e728f0477b48b91064093acdba81
+      Path: Events\Default Work Unit\Play_Sprint
+      maxAttenuation: 0
+      maxDuration: 2.4645624
+      minDuration: 2.4645624
+    - name: Stop_Car_Sound
+      guid: 979e648eb46437469a78736f6ac57e3d
+      id: 3152558286
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Stop_Car_Sound
+        ObjectType: 3
+        guid: 979e648eb46437469a78736f6ac57e3d
+      Path: Events\Default Work Unit\Stop_Car_Sound
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -166,9 +268,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584644222434982039
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedFileSystemItemIds: 02000000030000000d0000000e000000
+  ExpandedWaapiItemIds: 0200000003000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
