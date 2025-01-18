@@ -12,7 +12,19 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Destroy the bullet when it hits a collider
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+
+        }
+        else if (collision.gameObject.CompareTag("Building"))
+        {
+
+        }
+        else if (collision.gameObject.CompareTag("Car"))
+        {
+            var appearence_on_hit = collision.gameObject.GetComponent<ChangeAppearanceOnHit>();
+            appearence_on_hit.TransformToTree();
+            Destroy(gameObject);
+        }
     }
 }
