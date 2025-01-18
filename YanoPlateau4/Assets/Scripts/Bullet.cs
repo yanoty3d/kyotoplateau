@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public GameObject[] grass_prefabs;
     public float lifeTime = 3f; // Time before the bullet despawns
 
     void Start()
@@ -14,7 +15,10 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
-
+            var grass_pref = grass_prefabs[Random.Range(0, grass_prefabs.Length)];
+            Instantiate(grass_pref,transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            ScoreManager.spawned_grassed_count++;
         }
         else if (collision.gameObject.CompareTag("Building"))
         {
@@ -25,6 +29,7 @@ public class Bullet : MonoBehaviour
             var appearence_on_hit = collision.gameObject.GetComponent<ChangeAppearanceOnHit>();
             appearence_on_hit.TransformToTree();
             Destroy(gameObject);
+            ScoreManager.spawned_tree_count++;
         }
     }
 }

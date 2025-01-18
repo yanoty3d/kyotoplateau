@@ -47,6 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecdab91f965d5064d8cefd24d1675f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grass_prefabs:
+  - {fileID: 1700193797189004, guid: cc9601049784bf744bc7f80118f64966, type: 3}
+  - {fileID: 1700193797189004, guid: efb0e74d2ca4fe44c993ea665e78cfd1, type: 3}
+  - {fileID: 1700193797189004, guid: 3ee4eeaed82c357459a9327775a821e4, type: 3}
+  - {fileID: 1700193797189004, guid: b91de68b02477e74f847319d6fbcf330, type: 3}
   lifeTime: 3
 --- !u!54 &1907087755512970340
 Rigidbody:
