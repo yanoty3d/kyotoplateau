@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
+            AkSoundEngine.PostEvent("Play_Shot", gameObject);
         }
     }
 

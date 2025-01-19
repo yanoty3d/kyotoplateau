@@ -120,6 +120,11 @@ public class FirstPersonController : MonoBehaviour
 
     #region Head Bob
 
+    [SerializeField] private float baseFootstepInterval = 0.5f; // Default walking footstep interval
+    [SerializeField] private float sprintMultiplier = 0.7f; // Multiplies base interval for sprinting (shortens interval)
+    [SerializeField] private float crouchMultiplier = 1.5f; // Multiplies base interval for crouching (lengthens interval)
+
+
     public bool enableHeadBob = true;
     public Transform joint;
     public float bobSpeed = 10f;
@@ -130,6 +135,9 @@ public class FirstPersonController : MonoBehaviour
     private float timer = 0;
 
     #endregion
+
+    private float currentFootstepInterval; // Current footstep interval based on movement type
+    private float footstepTimer = 0f; // Timer to track footstep rhythm
 
     private void Awake()
     {
@@ -499,24 +507,27 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private void HeadBob()
+
+
+private void HeadBob()
 {
     if (isWalking)
     {
-        // Calculates HeadBob speed during sprint
+        // Adjust the head bob timer based on movement type
         if (isSprinting)
         {
             timer += Time.deltaTime * (bobSpeed + sprintSpeed);
+            currentFootstepInterval = baseFootstepInterval * sprintMultiplier;
         }
-        // Calculates HeadBob speed during crouched movement
         else if (isCrouched)
         {
             timer += Time.deltaTime * (bobSpeed * speedReduction);
+            currentFootstepInterval = baseFootstepInterval * crouchMultiplier;
         }
-        // Calculates HeadBob speed during walking
         else
         {
             timer += Time.deltaTime * bobSpeed;
+            currentFootstepInterval = baseFootstepInterval;
         }
 
         // Calculate new head bob position
@@ -530,20 +541,22 @@ public class FirstPersonController : MonoBehaviour
             jointOriginalPos.z + bobOffsetZ
         );
 
-        // Check if the head is at its lowest point
-        if (Mathf.Sin(timer - Time.deltaTime * bobSpeed) > Mathf.Sin(timer) && Mathf.Sin(timer) <= -0.99f && isGrounded)
-        {
-            Debug.Log("Head is at its lowest position!");
-            AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
-        }
+        // Update footstep timer
+        footstepTimer += Time.deltaTime;
 
-        // Play footstep sound
-        
+        // Trigger footsteps at regular intervals based on movement type
+        if (footstepTimer >= currentFootstepInterval)
+        {
+            footstepTimer = 0f; // Reset the footstep timer
+            AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
+            Debug.Log($"Footstep triggered! Interval: {currentFootstepInterval}");
+        }
     }
     else
     {
-        // Resets when player stops moving
+        // Reset timers and head position when the player stops moving
         timer = 0;
+        footstepTimer = 0;
         joint.localPosition = new Vector3(
             Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed),
             Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed),
@@ -551,6 +564,7 @@ public class FirstPersonController : MonoBehaviour
         );
     }
 }
+
 
 
 
