@@ -549,7 +549,7 @@ private void HeadBob()
         {
             footstepTimer = 0f; // Reset the footstep timer
             AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
-            Debug.Log($"Footstep triggered! Interval: {currentFootstepInterval}");
+            //Debug.Log($"Footstep triggered! Interval: {currentFootstepInterval}");
         }
     }
     else
