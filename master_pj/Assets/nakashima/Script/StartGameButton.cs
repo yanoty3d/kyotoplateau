@@ -8,6 +8,6 @@ public class StartGameButton : MonoBehaviour
     public string main_game_scene_name;
     public void OnClickedGameStartButton()
     {
-        SceneManager.LoadScene(main_game_scene_name)
+        SceneManager.LoadScene(main_game_scene_name);
     }
 }
