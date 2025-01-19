@@ -565,7 +565,7 @@ private void HeadBob()
     }
 }
 
-
+}
 
 
 
@@ -778,6 +778,6 @@ private void HeadBob()
 
 }
 
-}
+
 
 #endif
