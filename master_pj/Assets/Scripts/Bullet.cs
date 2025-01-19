@@ -35,6 +35,7 @@ public class Bullet : MonoBehaviour
             AkSoundEngine.PostEvent("Play_Change", tree);
             Instantiate(smoke_fx_prefab, collision.transform.position, Quaternion.identity);
             collision.gameObject.SetActive(false);
+            MainGameManager.Instance.DecreeseCarMax();
             ScoreManager.spawned_tree_count++;
             
         }
