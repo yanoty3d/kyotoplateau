@@ -1,3 +1,4 @@
+using AWSIM.TrafficSimulation;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class MainGameManager : MonoSingleton<MainGameManager>
 {
     public string result_scene_name;
     public float max_remaning_time;
+    public TrafficManager traffic_manager;
+
     public float RemaningTime { get; private set; }
     bool game_playing;
     void Start()
@@ -32,5 +35,10 @@ public class MainGameManager : MonoSingleton<MainGameManager>
             //SceneManager.LoadScene(result_scene_name);
             game_playing = false;
         }
+    }
+
+    int GetCurrentTrafficCount()
+    {
+        return traffic_manager.maxVehicleCount;
     }
 }
