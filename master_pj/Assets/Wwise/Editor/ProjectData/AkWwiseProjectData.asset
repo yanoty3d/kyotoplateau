@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: bbfe39bc5a22bd41aa61b56ab3ad1f8e
     GuidInternal: 
-    m_lastTime: -8584643429522332157
+    m_lastTime: -8584643397190931412
     List:
     - name: SFX
       guid: 19cbe6be907d2a428ea72d5ba919bf39
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a27eefce9fe88c44a83d4ac8f295a6b2
     GuidInternal: 
-    m_lastTime: -8584643429522668323
+    m_lastTime: -8584643397191218264
     List:
     - name: Play_Ambience
       guid: 8a9b884842546c4eb36cb0b861e0cf46
@@ -130,6 +130,23 @@ MonoBehaviour:
       maxAttenuation: 50
       maxDuration: -1
       minDuration: -1
+    - name: Play_Change
+      guid: 6655c4f266591b41a5ee16614d6c1578
+      id: 733947286
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Play_Change
+        ObjectType: 3
+        guid: 6655c4f266591b41a5ee16614d6c1578
+      Path: Events\Default Work Unit\Play_Change
+      maxAttenuation: 50
+      maxDuration: 3.8504167
+      minDuration: 3.8424168
     - name: Play_Footsteps
       guid: 3a09147080e56747a354fe82e028d7a0
       id: 3854155799
@@ -229,7 +246,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 893ec229e3562b4b858bb583a33c3234
       Path: Events\Default Work Unit\Play_Tree
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Stop_Car_Sound

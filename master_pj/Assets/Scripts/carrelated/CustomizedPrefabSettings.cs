@@ -14,6 +14,7 @@ public class CustomizedPrefabSettings : MonoBehaviour
         // ゲームオブジェクトにタグを設定
         SetTagRecursively(gameObject, "Car");
         AddBoxCollider();
+        AkSoundEngine.PostEvent("Play_Car_Sound", gameObject);
         /*
 
         // 自分自身に Collider がない場合、子オブジェクトを探索
@@ -22,6 +23,11 @@ public class CustomizedPrefabSettings : MonoBehaviour
             AddCollisionNotifierToChildren();
         }
         */
+    }
+
+    void OnDisable()
+    {
+        AkSoundEngine.PostEvent("Stop_Car_Sound", gameObject);
     }
 
     // 再帰的にタグを設定するメソッド
