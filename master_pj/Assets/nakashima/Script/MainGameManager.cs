@@ -9,6 +9,7 @@ public class MainGameManager : MonoSingleton<MainGameManager>
     public string result_scene_name;
     public float max_remaning_time;
     public TrafficManager traffic_manager;
+    public int car_decreese_delta = 1;
 
     public float RemaningTime { get; private set; }
     bool game_playing;
@@ -44,7 +45,7 @@ public class MainGameManager : MonoSingleton<MainGameManager>
 
     public void DecreeseCarMax()
     {
-        traffic_manager.maxVehicleCount--;
+        traffic_manager.maxVehicleCount-= car_decreese_delta;
     }
 
     float  GetCurrentTrafficCount()
