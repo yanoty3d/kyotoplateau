@@ -3,6 +3,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject[] grass_prefabs;
+    public GameObject[] tree_prefabs;
+    public GameObject smoke_fx_prefab;
     public float lifeTime = 3f; // Time before the bullet despawns
 
     void Start()
@@ -26,9 +28,10 @@ public class Bullet : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Car"))
         {
-            var appearence_on_hit = collision.gameObject.GetComponent<ChangeAppearanceOnHit>();
-            appearence_on_hit.TransformToTree();
-            Destroy(gameObject);
+            var tree_pref = tree_prefabs[Random.Range(0, tree_prefabs.Length)];
+            GameObject tree = Instantiate(tree_pref, collision.transform.position, tree_pref.transform.rotation);
+            Instantiate(smoke_fx_prefab, collision.transform.position, Quaternion.identity);
+            collision.gameObject.SetActive(false);
             ScoreManager.spawned_tree_count++;
         }
     }

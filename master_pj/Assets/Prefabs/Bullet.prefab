@@ -49,6 +49,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grass_prefabs:
   - {fileID: 5893688936572151829, guid: e242b72cfed869e4a97a69a1a2670935, type: 3}
+  tree_prefabs:
+  - {fileID: 1779090162253299471, guid: af28e02efb1b49bc09580ce7162442e3, type: 3}
+  - {fileID: 4124323062290505003, guid: e021f2107856b97978976612624c27b8, type: 3}
+  - {fileID: 4586183935837940532, guid: 3f7dd0e9bb47425f3b6515ab77926eb2, type: 3}
+  smoke_fx_prefab: {fileID: 6497499032146751385, guid: ff1c3e5db4b666b41a2d0a145f815efc,
+    type: 3}
   lifeTime: 3
 --- !u!54 &1907087755512970340
 Rigidbody:
