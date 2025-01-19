@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo>
 	<Project Name="Kyoto Hackathon" GUID="{C9576F47-F638-401F-8C1F-AC51D21F19B8}" Generator="2023.1.9.8628"/>
-	<CacheRoot>D:/OneDrive/Studio/Projects/Kyoto Plateau Hackathon/Wwise Project File/Kyoto Hackathon/.cache</CacheRoot>
+	<CacheRoot>D:/OneDrive/Studio/Projects/Kyoto Plateau Hackathon/Wwise Project Final/Kyoto Hackathon/.cache</CacheRoot>
 	<Platforms>
-		<Platform Name="Mac" GUID="{444B0E12-3C37-4383-8F4C-7D9523340DED}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="D:/OneDrive/Studio/Projects/Kyoto Plateau Hackathon/Wwise Project File/Kyoto Hackathon/GeneratedSoundBanks/Mac/"/>
-		<Platform Name="Windows" GUID="{F6B076FB-6D72-496B-B52C-9E106C7FE115}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="D:/OneDrive/Studio/Projects/Kyoto Plateau Hackathon/Wwise Project File/Kyoto Hackathon/GeneratedSoundBanks/Windows/"/>
+		<Platform Name="Mac" GUID="{444B0E12-3C37-4383-8F4C-7D9523340DED}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="D:/OneDrive/Studio/Projects/Kyoto Plateau Hackathon/Wwise Project Final/Kyoto Hackathon/GeneratedSoundBanks/Mac/"/>
+		<Platform Name="Windows" GUID="{F6B076FB-6D72-496B-B52C-9E106C7FE115}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="D:/OneDrive/Studio/Projects/Kyoto Plateau Hackathon/Wwise Project Final/Kyoto Hackathon/GeneratedSoundBanks/Windows/"/>
 	</Platforms>
 	<Languages>
 		<Language Name="English(US)" Id="684519430" GUID="{140D4DBA-2F54-4560-B0B1-A8FB33F8DE6D}" Default="true" UseAsStandIn="true"/>
 	</Languages>
-	<FileHash>{7CCF2E0C-8CC5-35DB-BF97-0D9086E852BF}</FileHash>
+	<FileHash>{7EE15587-0CE8-CE95-FD87-93764B67CEF1}</FileHash>
 </ProjectInfo>

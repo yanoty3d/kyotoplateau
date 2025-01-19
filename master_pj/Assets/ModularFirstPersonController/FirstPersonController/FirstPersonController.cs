@@ -473,6 +473,8 @@ public class FirstPersonController : MonoBehaviour
         {
             Crouch();
         }
+
+        AkSoundEngine.PostEvent("Play_Jump" , this.gameObject);
     }
 
     private void Crouch()
@@ -498,35 +500,58 @@ public class FirstPersonController : MonoBehaviour
     }
 
     private void HeadBob()
+{
+    if (isWalking)
     {
-        if(isWalking)
+        // Calculates HeadBob speed during sprint
+        if (isSprinting)
         {
-            // Calculates HeadBob speed during sprint
-            if(isSprinting)
-            {
-                timer += Time.deltaTime * (bobSpeed + sprintSpeed);
-            }
-            // Calculates HeadBob speed during crouched movement
-            else if (isCrouched)
-            {
-                timer += Time.deltaTime * (bobSpeed * speedReduction);
-            }
-            // Calculates HeadBob speed during walking
-            else
-            {
-                timer += Time.deltaTime * bobSpeed;
-            }
-            // Applies HeadBob movement
-            joint.localPosition = new Vector3(jointOriginalPos.x + Mathf.Sin(timer) * bobAmount.x, jointOriginalPos.y + Mathf.Sin(timer) * bobAmount.y, jointOriginalPos.z + Mathf.Sin(timer) * bobAmount.z);
+            timer += Time.deltaTime * (bobSpeed + sprintSpeed);
         }
+        // Calculates HeadBob speed during crouched movement
+        else if (isCrouched)
+        {
+            timer += Time.deltaTime * (bobSpeed * speedReduction);
+        }
+        // Calculates HeadBob speed during walking
         else
         {
-            // Resets when play stops moving
-            timer = 0;
-            joint.localPosition = new Vector3(Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));
+            timer += Time.deltaTime * bobSpeed;
         }
+
+        // Calculate new head bob position
+        float bobOffsetX = Mathf.Sin(timer) * bobAmount.x;
+        float bobOffsetY = Mathf.Sin(timer) * bobAmount.y;
+        float bobOffsetZ = Mathf.Sin(timer) * bobAmount.z;
+
+        joint.localPosition = new Vector3(
+            jointOriginalPos.x + bobOffsetX,
+            jointOriginalPos.y + bobOffsetY,
+            jointOriginalPos.z + bobOffsetZ
+        );
+
+        // Check if the head is at its lowest point
+        if (Mathf.Sin(timer - Time.deltaTime * bobSpeed) > Mathf.Sin(timer) && Mathf.Sin(timer) <= -0.99f && isGrounded)
+        {
+            Debug.Log("Head is at its lowest position!");
+            AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
+        }
+
+        // Play footstep sound
+        
+    }
+    else
+    {
+        // Resets when player stops moving
+        timer = 0;
+        joint.localPosition = new Vector3(
+            Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed),
+            Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed),
+            Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed)
+        );
     }
 }
+
 
 
 
@@ -736,6 +761,8 @@ public class FirstPersonController : MonoBehaviour
             SerFPC.ApplyModifiedProperties();
         }
     }
+
+}
 
 }
 
