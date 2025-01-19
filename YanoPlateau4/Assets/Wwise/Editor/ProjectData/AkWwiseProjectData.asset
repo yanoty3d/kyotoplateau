@@ -162,8 +162,8 @@ MonoBehaviour:
         guid: 74562ad34406594db2ddfd039b780ceb
       Path: Events\Default Work Unit\Play_Shot
       maxAttenuation: 0
-      maxDuration: 1.5
-      minDuration: 1.5
+      maxDuration: 1.90625
+      minDuration: 1.90625
     - name: Play_Sprint
       guid: 1704e728f0477b48b91064093acdba81
       id: 633054210
