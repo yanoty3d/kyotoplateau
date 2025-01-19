@@ -427,8 +427,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a551789408210a049a7d20a0ce14b2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treePrefab: {fileID: 114418, guid: 9b8fc966f95ea9c4194dc091fc40b478, type: 3}
-  smoke_fx_prefab: {fileID: 6497499032146751385, guid: ff1c3e5db4b666b41a2d0a145f815efc, type: 3}
+  treePrefab:
+  - {fileID: 1779090162253299471, guid: af28e02efb1b49bc09580ce7162442e3, type: 3}
+  - {fileID: 4586183935837940532, guid: 3f7dd0e9bb47425f3b6515ab77926eb2, type: 3}
+  - {fileID: 4124323062290505003, guid: e021f2107856b97978976612624c27b8, type: 3}
+  smoke_fx_prefab: {fileID: 6497499032146751385, guid: ff1c3e5db4b666b41a2d0a145f815efc,
+    type: 3}
 --- !u!1 &8875302637091512520
 GameObject:
   m_ObjectHideFlags: 0
