@@ -34,6 +34,7 @@ public class Bullet : MonoBehaviour
             GameObject tree = Instantiate(tree_pref, collision.transform.position, tree_pref.transform.rotation);
             Instantiate(smoke_fx_prefab, collision.transform.position, Quaternion.identity);
             collision.gameObject.SetActive(false);
+            MainGameManager.Instance.DecreeseCarMax();
             ScoreManager.spawned_tree_count++;
             
         }
