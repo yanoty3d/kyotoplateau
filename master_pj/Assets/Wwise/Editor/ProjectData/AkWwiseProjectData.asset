@@ -179,8 +179,8 @@ MonoBehaviour:
         guid: 1704e728f0477b48b91064093acdba81
       Path: Events\Default Work Unit\Play_Sprint
       maxAttenuation: 0
-      maxDuration: 2.4645624
-      minDuration: 2.4645624
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Car_Sound
       guid: 979e648eb46437469a78736f6ac57e3d
       id: 3152558286
@@ -269,7 +269,7 @@ MonoBehaviour:
     m_lastTime: -8584644222434982039
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0f00000010000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
