@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1366694535741013257}
   m_Layer: 0
   m_Name: Wheel_Fr_Mesh_LOD0
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1883210870956391973}
   m_Layer: 0
   m_Name: Vehicle_Bicycle_01_Mesh_LOD1
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 3731975725137006104}
   m_Layer: 0
   m_Name: Vehicle_Bicycle_01_LOD0
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 7505535679449154198}
   m_Layer: 0
   m_Name: Wheel_Rr_Mesh_LOD0
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 2821555029036546818}
   m_Layer: 0
   m_Name: Pedal_Shaft_Mesh_LOD0
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,9 +382,10 @@ GameObject:
   - component: {fileID: 4534669064309877681}
   - component: {fileID: 2369522805316177537}
   - component: {fileID: 6904490218688537505}
+  - component: {fileID: 3707220943040809636}
   m_Layer: 0
   m_Name: Vehicle_Bicycle_01_Blue
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -468,6 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebda077a72c546a7af70bc41307238b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundPlacementDirection: 0
   m_BackWheels:
   - {fileID: 8251886146720045782}
   - {fileID: 5983054463874526800}
@@ -483,6 +485,18 @@ MonoBehaviour:
     m_ThirdPersonOrbitInitialRotation: {x: 0, y: 30}
     m_ThirdPersonOrbitOffset: {x: 0, y: 0, z: 0}
     m_ThirdPersonOrbitDefaultDistance: 6
+--- !u!114 &3707220943040809636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134023792534841784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f093886148abc41a5970f815c6179e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7414053407085910937
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +510,7 @@ GameObject:
   - component: {fileID: 4474999905584935180}
   m_Layer: 0
   m_Name: Pedal_R_Mesh_LOD0
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -577,7 +591,7 @@ GameObject:
   - component: {fileID: 1953210774816984829}
   m_Layer: 0
   m_Name: BackWheelAxis
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,7 +624,7 @@ GameObject:
   - component: {fileID: 5041394229520696710}
   m_Layer: 0
   m_Name: Vehicle_Bicycle_01_Mesh_LOD0
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -694,7 +708,7 @@ GameObject:
   - component: {fileID: 1660836311169188775}
   m_Layer: 0
   m_Name: Pedal_L_Mesh_LOD0
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

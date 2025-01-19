@@ -13,16 +13,21 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_CAR_SOUND = 1756269068U;
+        static const AkUniqueID PLAY_CHANGE = 733947286U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_GRASS = 3198961276U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_SHOT = 268953978U;
         static const AkUniqueID PLAY_SPRINT = 633054210U;
+        static const AkUniqueID PLAY_TREE = 3492314494U;
         static const AkUniqueID STOP_CAR_SOUND = 3152558286U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID CAR_AMOUNT = 361947196U;
         static const AkUniqueID CAR_SPEED = 4164958897U;
     } // namespace GAME_PARAMETERS
 

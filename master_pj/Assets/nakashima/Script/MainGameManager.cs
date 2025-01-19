@@ -1,3 +1,4 @@
+using AWSIM.TrafficSimulation;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,17 @@ public class MainGameManager : MonoSingleton<MainGameManager>
 {
     public string result_scene_name;
     public float max_remaning_time;
+    public TrafficManager traffic_manager;
+    public int car_decreese_delta = 1;
+
     public float RemaningTime { get; private set; }
     bool game_playing;
+    int max_traffic;
     void Start()
     {
         RemaningTime = max_remaning_time;
         StartGameTimer();
+        max_traffic = traffic_manager.maxVehicleCount;
     }
 
     public void StartGameTimer()
@@ -32,5 +38,18 @@ public class MainGameManager : MonoSingleton<MainGameManager>
             //SceneManager.LoadScene(result_scene_name);
             game_playing = false;
         }
+
+        print(GetCurrentTrafficCount());
+        AkSoundEngine.SetRTPCValue("car_amount", GetCurrentTrafficCount(), AkSoundEngine.AK_INVALID_GAME_OBJECT);
+    }
+
+    public void DecreeseCarMax()
+    {
+        traffic_manager.maxVehicleCount-= car_decreese_delta;
+    }
+
+    float  GetCurrentTrafficCount()
+    {
+        return (float)traffic_manager.maxVehicleCount/ max_traffic * 100.0f;
     }
 }

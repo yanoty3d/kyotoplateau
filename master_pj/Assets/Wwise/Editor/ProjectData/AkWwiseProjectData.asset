@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: bbfe39bc5a22bd41aa61b56ab3ad1f8e
     GuidInternal: 
-    m_lastTime: -8584643624356701757
+    m_lastTime: -8584643397190931412
     List:
     - name: SFX
       guid: 19cbe6be907d2a428ea72d5ba919bf39
@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a27eefce9fe88c44a83d4ac8f295a6b2
     GuidInternal: 
-    m_lastTime: -8584643624357065014
+    m_lastTime: -8584643397191218264
     List:
+    - name: Play_Ambience
+      guid: 8a9b884842546c4eb36cb0b861e0cf46
+      id: 278617630
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Play_Ambience
+        ObjectType: 3
+        guid: 8a9b884842546c4eb36cb0b861e0cf46
+      Path: Events\Default Work Unit\Play_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Car_Sound
       guid: d73a638cd84a504797dece44685f8f35
       id: 1756269068
@@ -113,6 +130,23 @@ MonoBehaviour:
       maxAttenuation: 50
       maxDuration: -1
       minDuration: -1
+    - name: Play_Change
+      guid: 6655c4f266591b41a5ee16614d6c1578
+      id: 733947286
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Play_Change
+        ObjectType: 3
+        guid: 6655c4f266591b41a5ee16614d6c1578
+      Path: Events\Default Work Unit\Play_Change
+      maxAttenuation: 50
+      maxDuration: 3.8504167
+      minDuration: 3.8424168
     - name: Play_Footsteps
       guid: 3a09147080e56747a354fe82e028d7a0
       id: 3854155799
@@ -130,6 +164,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.56535417
       minDuration: 0.5230208
+    - name: Play_Grass
+      guid: 8f4e5482585ede4988089a56fcec18dc
+      id: 3198961276
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Play_Grass
+        ObjectType: 3
+        guid: 8f4e5482585ede4988089a56fcec18dc
+      Path: Events\Default Work Unit\Play_Grass
+      maxAttenuation: 50
+      maxDuration: 1.9375
+      minDuration: 1.9375
     - name: Play_Jump
       guid: be11e7b3de31dd48a64e88254944d79e
       id: 3689126666
@@ -179,8 +230,25 @@ MonoBehaviour:
         guid: 1704e728f0477b48b91064093acdba81
       Path: Events\Default Work Unit\Play_Sprint
       maxAttenuation: 0
-      maxDuration: 2.4645624
-      minDuration: 2.4645624
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Tree
+      guid: 893ec229e3562b4b858bb583a33c3234
+      id: 3492314494
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a27eefce9fe88c44a83d4ac8f295a6b2
+      - ElementName: Play_Tree
+        ObjectType: 3
+        guid: 893ec229e3562b4b858bb583a33c3234
+      Path: Events\Default Work Unit\Play_Tree
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Car_Sound
       guid: 979e648eb46437469a78736f6ac57e3d
       id: 3152558286
@@ -210,8 +278,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: d2254c52d0803d4bbebb1aaab026dc41
     GuidInternal: 
-    m_lastTime: -8584644204182980092
+    m_lastTime: -8584643431838509911
     List:
+    - name: car_amount
+      guid: ab56b47eff92c64897803c4915f77db2
+      id: 361947196
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d2254c52d0803d4bbebb1aaab026dc41
+      - ElementName: car_amount
+        ObjectType: 13
+        guid: ab56b47eff92c64897803c4915f77db2
+      Path: Game Parameters\Default Work Unit\car_amount
     - name: car_speed
       guid: c51a93273c19774c890d339789ec8f19
       id: 4164958897
@@ -269,7 +351,7 @@ MonoBehaviour:
     m_lastTime: -8584644222434982039
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000f000000100000001200000013000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
