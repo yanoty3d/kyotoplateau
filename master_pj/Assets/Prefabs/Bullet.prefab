@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grass_prefabs:
-  - {fileID: 1700193797189004, guid: cc9601049784bf744bc7f80118f64966, type: 3}
+  - {fileID: 5893688936572151829, guid: e242b72cfed869e4a97a69a1a2670935, type: 3}
   lifeTime: 3
 --- !u!54 &1907087755512970340
 Rigidbody:
@@ -74,7 +74,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!135 &6380765205466123407
