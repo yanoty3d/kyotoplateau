@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_CAR_SOUND = 1756269068U;
+        static const AkUniqueID PLAY_CHANGE = 733947286U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_GRASS = 3198961276U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;

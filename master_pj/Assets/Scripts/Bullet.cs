@@ -18,7 +18,6 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             AkSoundEngine.PostEvent("Play_Grass", gameObject);
-            Debug.Log("GRASSS");
             var grass_pref = grass_prefabs[Random.Range(0, grass_prefabs.Length)];
             Instantiate(grass_pref,transform.position, Quaternion.identity);
             Destroy(gameObject);
@@ -30,9 +29,9 @@ public class Bullet : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Car"))
         {
+            AkSoundEngine.PostEvent("Play_Change", gameObject);
             var tree_pref = tree_prefabs[Random.Range(0, tree_prefabs.Length)];
             GameObject tree = Instantiate(tree_pref, collision.transform.position, tree_pref.transform.rotation);
-            AkSoundEngine.PostEvent("Play_Change", tree);
             Instantiate(smoke_fx_prefab, collision.transform.position, Quaternion.identity);
             collision.gameObject.SetActive(false);
             MainGameManager.Instance.DecreeseCarMax();
